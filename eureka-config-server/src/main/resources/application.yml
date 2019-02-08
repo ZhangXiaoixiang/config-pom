@@ -1,0 +1,21 @@
+server:
+  port: 8899
+spring:
+  application:
+    name: eureka-config-server
+  profiles:
+    active: subversion
+  cloud:
+    config:
+      server:
+        svn:
+          uri: http://xiaomiPro/svn/test-project/
+          username: root
+          password: 1234
+        default-label: eureka
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
